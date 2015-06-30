@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using MongoDB.Driver;
-using M101DotNet.WebApp.Models;
-using M101DotNet.WebApp.Models.Account;
+using WebApp.Models;
+using WebApp.Models.Account;
 
-namespace M101DotNet.WebApp.Controllers
+namespace WebApp.Controllers
 {
     [AllowAnonymous]
     public class AccountController : Controller
@@ -41,12 +38,10 @@ namespace M101DotNet.WebApp.Controllers
                 return View(model);
             }
 
-            var identity = new ClaimsIdentity(new[]
-                {
+            var identity = new ClaimsIdentity(new[] {
                     new Claim(ClaimTypes.Name, user.Name),
                     new Claim(ClaimTypes.Email, user.Email)
-                },
-                "ApplicationCookie");
+                }, "ApplicationCookie");
 
             var context = Request.GetOwinContext();
             var authManager = context.Authentication;

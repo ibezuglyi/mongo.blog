@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>M101DotNet.WebApp</RootNamespace>
-    <AssemblyName>M101DotNet.WebApp</AssemblyName>
+    <RootNamespace>WebApp</RootNamespace>
+    <AssemblyName>WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -148,12 +148,6 @@
     <Compile Include="Models\Account\RegisterModel.cs" />
     <Compile Include="Models\BlogContext.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
-    <Compile Include="Models\Comment.cs" />
-    <Compile Include="Models\Home\NewCommentModel.cs" />
-    <Compile Include="Models\Home\NewPostModel.cs" />
-    <Compile Include="Models\Home\IndexModel.cs" />
-    <Compile Include="Models\Home\PostModel.cs" />
-    <Compile Include="Models\Post.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -206,12 +200,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Home\NewPost.cshtml" />
-    <Content Include="Views\Home\Post.cshtml" />
-    <Content Include="Views\Home\Posts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

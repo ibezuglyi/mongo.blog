@@ -1,21 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
 using MongoDB.Driver;
 
-namespace M101DotNet.WebApp.Models
+namespace WebApp.Models
 {
     public class BlogContext
     {
         public const string CONNECTION_STRING_NAME = "Blog";
         public const string DATABASE_NAME = "blog";
-        public const string POSTS_COLLECTION_NAME = "posts";
         public const string USERS_COLLECTION_NAME = "users";
 
-        // This is ok... Normally, they would be put into
-        // an IoC container.
         private static readonly IMongoClient _client;
         private static readonly IMongoDatabase _database;
 
@@ -29,11 +24,6 @@ namespace M101DotNet.WebApp.Models
         public IMongoClient Client
         {
             get { return _client; }
-        }
-
-        public IMongoCollection<Post> Posts
-        {
-            get { return _database.GetCollection<Post>(POSTS_COLLECTION_NAME); }
         }
 
         public IMongoCollection<User> Users

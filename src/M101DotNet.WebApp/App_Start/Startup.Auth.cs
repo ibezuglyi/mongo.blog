@@ -8,7 +8,7 @@ using Microsoft.Owin.Security.Cookies;
 using MongoDB.Driver;
 using Owin;
 
-namespace M101DotNet.WebApp
+namespace WebApp
 {
     public partial class Startup
     {
